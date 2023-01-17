@@ -8,7 +8,7 @@ from shroomdk import ShroomDK
 import tweepy
 
 sdk = ShroomDK("00dba474-bd21-4d4d-a9b9-c5eaa08aac33")
-gc = gs.service_account(filename='credentials.json')
+gc = gs.service_account(filename='actions/credentials.json')
 sh = gc.open_by_url('https://docs.google.com/spreadsheets/d/1wmVhR3GYJIcAvKR1j_XawVwbTI0Vmi_8K5Bv4vGGHF8/edit?usp=sharing')
 ws = sh.worksheet('dao_details')
 df = pd.DataFrame(ws.get_all_records())
